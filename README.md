@@ -25,3 +25,14 @@ $ require_relative 'weather_predicter'
 $ WeatherPredicter.new(city: 'Berlin').call
 => 15
 ```
+
+
+3. Имплементировать класс IceCreamFactory, который производит мороженое и при этом использует WeatherPredicter: если завтра больше +30, то производится в 1.5 раза больше мороженого, чем запрошено; если меньше +10, то производится в 2 раза меньше. 
+Всё мороженое производится в фольгированной упаковке FoilPackage
+
+```ruby
+$ irb
+$ require_relative 'factory'
+$ IceCreamFactory.new.produce!(quantity: 6)
+=> [#<IceCream:0x00007f67665c7a40 @package=#<FoilPackage:0x00007f67665c7a18>>, #<IceCream:0x00007f67665c79f0 @package=#<FoilPackage:0x00007f67665c79c8>>]
+```
